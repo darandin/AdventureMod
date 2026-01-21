@@ -1,0 +1,44 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Intelligent_Large",
+  "Modify": {
+    "MaxHealth": 250,
+    "ViewSector": 150,
+    "DropList": "Drop_Golem_Firesteel",
+    "Appearance": "Golem_Firesteel",
+    "Weapons": [],
+    "OffHand": [],
+    "MaxSpeed": 6.5,
+    "ViewRange": 10,
+    "WakingPeriod": [
+      0.0,
+      24.0
+    ],
+    "WakingIdleBehaviorComponent": "Component_Instruction_Stationary_Idle",
+    "Attack": "Root_NPC_Golem_Firesteel_Attack",
+    "AttackDistance": 2.5,
+    "BlockProbability": 1,
+    "DesiredAttackDistanceRange": [
+      1,
+      1
+    ],
+    "CombatRelativeTurnSpeed": 0.25,
+    "LeashDistance": 15,
+    "HardLeashDistance": 60,
+    "AttitudeGroup": "Golem",
+    "_CombatConfig": {
+      "EntityEffect": "Immunity_Fire"
+    },
+    "IsMemory": true,
+    "MemoriesCategory": "Elemental",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Golem_Firesteel.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

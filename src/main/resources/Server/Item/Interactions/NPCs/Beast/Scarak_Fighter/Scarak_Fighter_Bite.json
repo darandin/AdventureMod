@@ -1,0 +1,127 @@
+{
+  "Type": "Simple",
+  "Effects": {
+    "ItemPlayerAnimationsId": "Scarak_Fighter_Default",
+    "ItemAnimationId": "Bite"
+  },
+  "$Comment": "Prepare Delay",
+  "RunTime": 0.167,
+  "Next": {
+    "Type": "Parallel",
+    "$Comment": "Make sure this parallel interaction is needed and can\u0027t be optimized away",
+    "Interactions": [
+      {
+        "Interactions": [
+          {
+            "Type": "ApplyForce",
+            "Force": 1200,
+            "Direction": {
+              "X": 0,
+              "Y": 0,
+              "Z": -10
+            },
+            "AdjustVertical": false,
+            "VerticalClamp": [
+              -85,
+              20
+            ],
+            "WaitForGround": false,
+            "ChangeVelocityType": "Add",
+            "VelocityConfig": {
+              "AirResistance": 0.97,
+              "AirResistanceMax": 0.96,
+              "GroundResistance": 0.94,
+              "GroundResistanceMax": 0.82,
+              "Threshold": 3.0,
+              "Style": "Exp"
+            }
+          },
+          {
+            "Type": "Selector",
+            "$Comment": "Length of Combat",
+            "RunTime": 0.083,
+            "Selector": {
+              "Id": "Horizontal",
+              "Direction": "ToLeft",
+              "TestLineOfSight": true,
+              "ExtendTop": 0.5,
+              "ExtendBottom": 0.5,
+              "StartDistance": 0.5,
+              "EndDistance": 2,
+              "Length": 30,
+              "RollOffset": 90,
+              "YawStartOffset": -15
+            },
+            "HitEntity": {
+              "Interactions": [
+                {
+                  "Type": "Replace",
+                  "DefaultValue": {
+                    "Interactions": [
+                      "NPC_Attack_Melee_Damage"
+                    ]
+                  },
+                  "Var": "Melee_Damage"
+                },
+                {
+                  "Type": "DamageEntity",
+                  "Entity": "Target",
+                  "DamageCalculator": {
+                    "Type": "Absolute",
+                    "BaseDamage": {
+                      "Poison": 1
+                    },
+                    "RandomPercentageModifier": 0.1
+                  },
+                  "DamageEffects": {
+                    "WorldSoundEventId": "SFX_Scarak_Seeker_Spitball_Death",
+                    "WorldParticles": [
+                      {
+                        "SystemId": "Impact_Poison"
+                      }
+                    ]
+                  },
+                  "Next": {
+                    "Type": "EffectCondition",
+                    "Entity": "Target",
+                    "EntityEffectIds": [
+                      "Antidote"
+                    ],
+                    "Match": "None",
+                    "Next": {
+                      "Type": "ClearEntityEffect",
+                      "Entity": "Target",
+                      "EntityEffectId": "Poison_T2",
+                      "Next": {
+                        "Type": "ApplyEffect",
+                        "Entity": "Target",
+                        "EffectId": "Poison_T2"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "Next": {
+              "Type": "Simple",
+              "$Comment": "Pad the interaction length",
+              "RunTime": 0.25
+            }
+          }
+        ]
+      },
+      {
+        "Interactions": [
+          {
+            "Type": "Simple",
+            "$Comment": "Length of Effect",
+            "RunTime": 0.167,
+            "Effects": {
+              "WorldSoundEventId": "SFX_NPC_Unarmed_Swing"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "Group": "AdventureMod",
+  "Name": "AdventureMod",
+  "Version": "1.0.0",
+  "Description": "",
+  "Authors": [
+    {
+      "Name": "Darandin"
+    }
+  ],
+  "Website": "",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "Main": "com.adventuremod.plugin.Main",
+  "DisabledByDefault": false,
+  "IncludesAssetPack": true
+}

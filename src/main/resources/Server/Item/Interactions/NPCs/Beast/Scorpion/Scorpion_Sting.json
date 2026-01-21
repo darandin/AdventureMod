@@ -1,0 +1,84 @@
+{
+  "Type": "Simple",
+  "Effects": {
+    "ItemPlayerAnimationsId": "Scorpion_Default",
+    "ItemAnimationId": "Sting"
+  },
+  "$Comment": "Prepare Delay",
+  "RunTime": 0.25,
+  "Next": {
+    "Type": "Selector",
+    "Effects": {
+      "WorldSoundEventId": "SFX_NPC_Unarmed_Swing"
+    },
+    "$Comment": "Length of Combat",
+    "RunTime": 0.23,
+    "Selector": {
+      "Id": "Horizontal",
+      "Direction": "ToLeft",
+      "TestLineOfSight": true,
+      "ExtendTop": 0.5,
+      "ExtendBottom": 0.5,
+      "StartDistance": 0.5,
+      "EndDistance": 3,
+      "Length": 90,
+      "RollOffset": 90,
+      "YawStartOffset": -60
+    },
+    "HitEntity": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "DefaultValue": {
+            "Interactions": [
+              "Scorpion_Sting_Damage"
+            ]
+          },
+          "Var": "Sting_Damage"
+        },
+        {
+          "Type": "DamageEntity",
+          "Entity": "Target",
+          "DamageCalculator": {
+            "Type": "Absolute",
+            "BaseDamage": {
+              "Poison": 1
+            },
+            "RandomPercentageModifier": 0.1
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Scarak_Seeker_Spitball_Death",
+            "WorldParticles": [
+              {
+                "SystemId": "Impact_Poison"
+              }
+            ]
+          },
+          "Next": {
+            "Type": "EffectCondition",
+            "Entity": "Target",
+            "EntityEffectIds": [
+              "Antidote"
+            ],
+            "Match": "None",
+            "Next": {
+              "Type": "ClearEntityEffect",
+              "Entity": "Target",
+              "EntityEffectId": "Poison_T2",
+              "Next": {
+                "Type": "ApplyEffect",
+                "Entity": "Target",
+                "EffectId": "Poison_T2"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Next": {
+      "Type": "Simple",
+      "$Comment": "Pad the interaction length",
+      "RunTime": 0.1
+    }
+  }
+}
