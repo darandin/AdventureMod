@@ -2,33 +2,30 @@
   "Type": "Variant",
   "Reference": "Template_Intelligent_Large",
   "Modify": {
-    "MaxHealth": 250,
+    "MaxHealth": 224,
     "ViewSector": 150,
-    "DropList": "Drop_Golem_Firesteel",
-    "Appearance": "Golem_Firesteel",
+    "DropList": "Drop_Golem_Crystal_Frost",
+    "Appearance": "Golem_Crystal_Frost",
     "Weapons": [],
     "OffHand": [],
-    "MaxSpeed": 6,
+    "MaxSpeed": 5,
     "ViewRange": 10,
-    "WakingPeriod": [
-      0.0,
-      24.0
-    ],
     "WakingIdleBehaviorComponent": "Component_Instruction_Stationary_Idle",
-    "Attack": "Root_NPC_Golem_Firesteel_Attack",
+    "Attack": "Root_NPC_Golem_Crystal_Frost_Attack",
     "AttackDistance": 2.5,
-    "BlockProbability": 1,
+    "BlockProbability": 0,
     "DesiredAttackDistanceRange": [
-      1,
-      1
+      2,
+      2.4
+    ],
+    "CombatAttackPostDelay": [
+      0.8,
+      1.5
     ],
     "CombatRelativeTurnSpeed": 0.25,
-    "LeashDistance": 15,
-    "HardLeashDistance": 60,
+    "LeashDistance": 10,
+    "HardLeashDistance": 15,
     "AttitudeGroup": "Golem",
-    "_CombatConfig": {
-      "EntityEffect": "Immunity_Fire"
-    },
     "IsMemory": true,
     "MemoriesCategory": "Elemental",
     "NameTranslationKey": {
@@ -37,7 +34,7 @@
   },
   "Parameters": {
     "NameTranslationKey": {
-      "Value": "server.npcRoles.Golem_Firesteel.name",
+      "Value": "server.npcRoles.Golem_Crystal_Frost.name",
       "Description": "Translation key for NPC name display"
     }
   }

@@ -56,7 +56,7 @@
             "Z": -2
           },
           "Type": "Force",
-          "Force": 5,
+          "Force": 4,
           "VelocityType": "Set",
           "VelocityConfig": {
             "AirResistance": 0.99,
