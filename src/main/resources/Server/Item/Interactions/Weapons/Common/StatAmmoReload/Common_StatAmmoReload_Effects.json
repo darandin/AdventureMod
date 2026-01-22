@@ -1,7 +1,7 @@
 {
   "Type": "Simple",
-  "RunTime": 0.3,
-  "HorizontalSpeedMultiplier": 0.75,
+  "RunTime": 0.75,
+  "HorizontalSpeedMultiplier": 0.7,
   "Effects": {
     "ItemAnimationId": "Reload",
     "WorldSoundEventId": "SFX_Hand_Crossbow_T2_Load",

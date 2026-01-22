@@ -11,7 +11,7 @@
     "ViewRange": 8,
     "HearingRange": 12,
     "AbsoluteDetectionRange": 2,
-    "AlertedRange": 18,
+    "AlertedRange": 50,
     "IsMemory": true,
     "MemoriesCategory": "Mythic",
     "AlertedTime": [

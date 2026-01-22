@@ -10,14 +10,14 @@
     "WanderRadius": 20,
     "ViewRange": 6,
     "HearingRange": 8,
-    "AlertedRange": 10,
+    "AlertedRange": 60,
     "AlertedTime": [
       2,
       2
     ],
     "FleeIfNotThreatened": false,
     "HardLeashDistance": 60,
-    "LeashDistance": 30,
+    "LeashDistance": 45,
     "LeashMinPlayerDistance": 5,
     "LeashTimer": [
       3,

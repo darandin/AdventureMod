@@ -1,6 +1,7 @@
 {
   "Type": "Simple",
   "RunTime": 0.8,
+  "HorizontalSpeedMultiplier": 0.7,
   "Effects": {
     "ItemAnimationId": "ReloadReady",
     "WorldSoundEventId": "SFX_Door_Crude_Open",
