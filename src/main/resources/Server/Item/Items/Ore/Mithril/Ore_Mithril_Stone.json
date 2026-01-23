@@ -20,7 +20,7 @@
     "RandomRotation": "YawStep90",
     "Gathering": {
       "Breaking": {
-        "GatherType": "Ore_Mithril",
+        "GatherType": "OreMithril",
         "DropList": {
           "Container": {
             "Type": "Multiple",

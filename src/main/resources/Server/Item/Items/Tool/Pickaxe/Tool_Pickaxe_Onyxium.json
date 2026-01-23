@@ -38,39 +38,39 @@
       },
       {
         "Power": 1,
-        "GatherType": "Ore_Copper"
+        "GatherType": "OreCopper"
       },
       {
         "Power": 1,
-        "GatherType": "Ore_Iron"
+        "GatherType": "OreIron"
       },
       {
         "Power": 1,
-        "GatherType": "Ore_Silver"
+        "GatherType": "OreSilver"
       },
       {
         "Power": 1,
-        "GatherType": "Ore_Gold"
+        "GatherType": "OreGold"
       },
       {
         "Power": 1,
-        "GatherType": "Ore_Cobalt"
+        "GatherType": "OreCobalt"
       },
       {
         "Power": 1,
-        "GatherType": "Ore_Thorium"
+        "GatherType": "OreThorium"
       },
       {
         "Power": 0.5,
-        "GatherType": "Ore_Adamantite"
+        "GatherType": "OreAdamantite"
       },
       {
         "Power": 0.5,
-        "GatherType": "Ore_Mithril"
+        "GatherType": "OreMithril"
       },
       {
         "Power": 0.35,
-        "GatherType": "Ore_Onyxium"
+        "GatherType": "OreOnyxium"
       }
     ],
     "DurabilityLossBlockTypes": [

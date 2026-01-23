@@ -1,6 +1,6 @@
 {
   "Type": "Variant",
-  "Reference": "Template_Intelligent",
+  "Reference": "Template_Intelligent_Scarak_Fighter",
   "Parameters": {
     "FollowPatrolPath": {
       "Value": false,
@@ -29,7 +29,7 @@
       "Compute": "Patrol"
     },
     "Attack": "Root_NPC_Scarak_Fighter_Attack",
-    "AttackDistance": 4.5,
+    "AttackDistance": 4,
     "BlockProbability": 0,
     "AttitudeGroup": "Scarak",
     "IsMemory": true,

@@ -23,7 +23,7 @@
       "Description": "Hearing range"
     },
     "AlertedRange": {
-      "Value": 600,
+      "Value": 100,
       "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
     },
     "DropList": {

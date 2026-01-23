@@ -41,16 +41,14 @@
             "$Comment": "Length of Combat",
             "RunTime": 0.083,
             "Selector": {
-              "Id": "Horizontal",
-              "Direction": "ToLeft",
+              "Id": "Stab",
               "TestLineOfSight": true,
-              "ExtendTop": 0.5,
-              "ExtendBottom": 0.5,
-              "StartDistance": 0.5,
-              "EndDistance": 2,
-              "Length": 30,
-              "RollOffset": 90,
-              "YawStartOffset": -15
+              "ExtendTop": 0.75,
+              "ExtendBottom": 0.75,
+              "ExtendLeft": 0.75,
+              "ExtendRight": 0.75,
+              "StartDistance": 1,
+              "EndDistance": 2
             },
             "HitEntity": {
               "Interactions": [

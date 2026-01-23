@@ -20,7 +20,7 @@
     "RandomRotation": "YawStep90",
     "Gathering": {
       "Breaking": {
-        "GatherType": "Ore_Iron",
+        "GatherType": "OreIron",
         "DropList": {
           "Container": {
             "Type": "Multiple",

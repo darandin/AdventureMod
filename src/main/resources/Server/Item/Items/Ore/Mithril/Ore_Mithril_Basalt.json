@@ -6,7 +6,7 @@
   "BlockType": {
     "Gathering": {
       "Breaking": {
-        "GatherType": "Ore_Mithril",
+        "GatherType": "OreMithril",
         "DropList": {
           "Container": {
             "Type": "Multiple",
