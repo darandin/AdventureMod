@@ -29,7 +29,7 @@
       "Compute": "Patrol"
     },
     "Attack": "Root_NPC_Scarak_Fighter_Attack",
-    "AttackDistance": 4,
+    "AttackDistance": 4.5,
     "BlockProbability": 0,
     "AttitudeGroup": "Scarak",
     "IsMemory": true,
