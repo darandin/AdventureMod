@@ -1,5 +1,5 @@
 {
-  "Parent": "Template_Weapon_Crossbow",
+  "Parent": "Template_Weapon_Crossbow_Low_Capacity",
   "TranslationProperties": {
     "Name": "server.items.Weapon_Crossbow_Iron.name"
   },
@@ -48,7 +48,7 @@
           "Parent": "Weapon_Crossbow_Damage_Standard_Projectile",
           "DamageCalculator": {
             "BaseDamage": {
-              "Projectile": 18
+              "Projectile": 13
             }
           }
         }
@@ -60,7 +60,7 @@
           "Parent": "Weapon_Crossbow_Damage_Combo_Projectile",
           "DamageCalculator": {
             "BaseDamage": {
-              "Projectile": 25
+              "Projectile": 20
             }
           }
         }
