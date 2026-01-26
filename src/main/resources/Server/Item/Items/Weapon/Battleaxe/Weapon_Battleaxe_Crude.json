@@ -127,7 +127,7 @@
           },
           "DamageCalculator": {
             "BaseDamage": {
-              "Physical": 18
+              "Physical": 25
             }
           },
           "EntityStatsOnHit": [

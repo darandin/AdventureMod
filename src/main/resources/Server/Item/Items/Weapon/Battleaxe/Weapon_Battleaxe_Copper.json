@@ -36,22 +36,6 @@
     ]
   },
   "InteractionVars": {
-    "Swing_Down_Damage": {
-      "Interactions": [
-        {
-          "Parent": "Weapon_Battleaxe_Primary_Swing_Down_Damage",
-          "DamageCalculator": {
-            "BaseDamage": {
-              "Physical": 29
-            }
-          },
-          "DamageEffects": {
-            "WorldSoundEventId": "SFX_Battleaxe_T1_Impact",
-            "LocalSoundEventId": "SFX_Battleaxe_T1_Impact"
-          }
-        }
-      ]
-    },
     "Swing_Down_Left_Damage": {
       "Interactions": [
         {
@@ -84,13 +68,29 @@
         }
       ]
     },
+    "Swing_Down_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Primary_Swing_Down_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 29
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Battleaxe_T1_Impact",
+            "LocalSoundEventId": "SFX_Battleaxe_T1_Impact"
+          }
+        }
+      ]
+    },
     "Downstrike_Damage": {
       "Interactions": [
         {
           "Parent": "Weapon_Battleaxe_Primary_Downstrike_Damage",
           "DamageCalculator": {
             "BaseDamage": {
-              "Physical": 23
+              "Physical": 32
             }
           },
           "EntityStatsOnHit": [

@@ -85,7 +85,7 @@
           "Parent": "Weapon_Daggers_Primary_Swing_Left_Damage",
           "DamageCalculator": {
             "BaseDamage": {
-              "Physical": 1
+              "Physical": 3
             }
           },
           "DamageEffects": {

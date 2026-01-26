@@ -90,7 +90,7 @@
           },
           "DamageCalculator": {
             "BaseDamage": {
-              "Physical": 5
+              "Physical": 6
             }
           }
         }
@@ -106,7 +106,7 @@
           },
           "DamageCalculator": {
             "BaseDamage": {
-              "Physical": 6
+              "Physical": 7
             }
           }
         }
@@ -149,7 +149,7 @@
           },
           "DamageCalculator": {
             "BaseDamage": {
-              "Physical": 16
+              "Physical": 20
             }
           },
           "EntityStatsOnHit": [

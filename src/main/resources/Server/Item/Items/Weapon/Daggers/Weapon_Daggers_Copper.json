@@ -41,7 +41,7 @@
           "Parent": "Weapon_Daggers_Primary_Swing_Left_Damage",
           "DamageCalculator": {
             "BaseDamage": {
-              "Physical": 3
+              "Physical": 4
             }
           },
           "DamageEffects": {
@@ -58,7 +58,7 @@
           "Parent": "Weapon_Daggers_Primary_Swing_Right_Damage",
           "DamageCalculator": {
             "BaseDamage": {
-              "Physical": 3
+              "Physical": 4
             }
           },
           "DamageEffects": {
@@ -121,43 +121,7 @@
           "DamageEffects": {
             "WorldSoundEventId": "SFX_Daggers_T1_Slash_Impact",
             "LocalSoundEventId": "SFX_Daggers_T1_Slash_Impact"
-          },
-          "AngledDamage": [
-            {
-              "Angle": 180,
-              "AngleDistance": 80,
-              "DamageEffects": {
-                "Knockback": {
-                  "Direction": { "X": 0, "Y": 2, "Z": -3 },
-                  "Type": "Force",
-                  "Force": 6,
-                  "VelocityType": "Set",
-                  "VelocityConfig": {
-                    "AirResistance": 0.99,
-                    "AirResistanceMax": 0.98,
-                    "GroundResistance": 0.94,
-                    "GroundResistanceMax": 0.3,
-                    "Threshold": 3.0,
-                    "Style": "Linear"
-                  }
-                },
-                "WorldParticles": [
-                  {
-                    "SystemId": "Impact_Critical",
-                    "Scale": 1,
-                    "RotationOffset": { "Yaw": 180, "Pitch": 0, "Roll": 0 }
-                  }
-                ],
-                "LocalSoundEventId": "SFX_Daggers_T1_Slash_Impact",
-                "WorldSoundEventId": "SFX_Daggers_T1_Slash_Impact"
-              },
-              "DamageCalculator": {
-                "BaseDamage": {
-                  "Physical": 38
-                }
-              }
-            }
-          ]
+          }
         }
       ]
     },
@@ -179,43 +143,7 @@
           "DamageEffects": {
             "WorldSoundEventId": "SFX_Daggers_T1_Stab_Impact",
             "LocalSoundEventId": "SFX_Daggers_T1_Stab_Impact"
-          },
-          "AngledDamage": [
-            {
-              "Angle": 180,
-              "AngleDistance": 80,
-              "DamageEffects": {
-                "Knockback": {
-                  "Direction": { "X": 0, "Y": 1, "Z": -2 },
-                  "Type": "Force",
-                  "Force": 5,
-                  "VelocityType": "Set",
-                  "VelocityConfig": {
-                    "AirResistance": 0.99,
-                    "AirResistanceMax": 0.98,
-                    "GroundResistance": 0.94,
-                    "GroundResistanceMax": 0.3,
-                    "Threshold": 3.0,
-                    "Style": "Linear"
-                  }
-                },
-                "WorldParticles": [
-                  {
-                    "SystemId": "Impact_Critical",
-                    "Scale": 1,
-                    "RotationOffset": { "Yaw": 180, "Pitch": 0, "Roll": 0 }
-                  }
-                ],
-                "LocalSoundEventId": "SFX_Daggers_T1_Stab_Impact",
-                "WorldSoundEventId": "SFX_Daggers_T1_Stab_Impact"
-              },
-              "DamageCalculator": {
-                "BaseDamage": {
-                  "Physical": 47
-                }
-              }
-            }
-          ]
+          }
         }
       ]
     },
@@ -232,43 +160,7 @@
           "DamageEffects": {
             "WorldSoundEventId": "SFX_Daggers_T1_Slash_Impact",
             "LocalSoundEventId": "SFX_Daggers_T1_Slash_Impact"
-          },
-          "AngledDamage": [
-            {
-              "Angle": 180,
-              "AngleDistance": 80,
-              "DamageEffects": {
-                "Knockback": {
-                  "Direction": { "X": 0, "Y": 1, "Z": -2 },
-                  "Type": "Force",
-                  "Force": 7,
-                  "VelocityType": "Add",
-                  "VelocityConfig": {
-                    "AirResistance": 0.99,
-                    "AirResistanceMax": 0.98,
-                    "GroundResistance": 0.94,
-                    "GroundResistanceMax": 0.3,
-                    "Threshold": 3.0,
-                    "Style": "Linear"
-                  }
-                },
-                "WorldParticles": [
-                  {
-                    "SystemId": "Impact_Critical",
-                    "Scale": 1,
-                    "RotationOffset": { "Yaw": 180, "Pitch": 0, "Roll": 0 }
-                  }
-                ],
-                "LocalSoundEventId": "SFX_Daggers_T1_Slash_Impact",
-                "WorldSoundEventId": "SFX_Daggers_T1_Slash_Impact"
-              },
-              "DamageCalculator": {
-                "BaseDamage": {
-                  "Physical": 30
-                }
-              }
-            }
-          ]
+          }
         }
       ]
     },
