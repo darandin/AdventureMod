@@ -1,0 +1,107 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Predator",
+  "Modify": {
+    "Appearance": "Leopard_Snow",
+    "AttitudeGroup": "PredatorsBig",
+    "DropList": "Drop_Leopard_Snow",
+    "MaxHealth": 103,
+    "MaxSpeed": 10,
+    "WanderRadius": 15,
+    "ViewRange": 30,
+    "HearingRange": 12,
+    "AbsoluteDetectionRange": 2,
+    "AlertedRange": 60,
+    "IsMemory": true,
+    "MemoriesCategory": "Predator",
+    "AlertedTime": [
+      3,
+      3
+    ],
+    "MaintainDistanceWhileAlerted": false,
+    "ThreatenDelayRange": [
+      2,
+      2
+    ],
+    "ThreatenAnimation": "Howl",
+    "FleeIfNotThreatened": false,
+    "FleeRange": 11,
+    "HardLeashDistance": 60,
+    "LeashDistance": 30,
+    "LeashMinPlayerDistance": 7,
+    "LeashTimer": [
+      4,
+      5
+    ],
+    "CombatBehaviorDistance": 9,
+    "CombatDirectWeight": 0,
+    "CombatStrafeWeight": 10,
+    "CombatBackOffAfterAttack": true,
+    "CombatBackOffDistanceRange": [
+      5,
+      6
+    ],
+    "CombatBackOffDurationRange": [
+      1.5,
+      4
+    ],
+    "Attack": "Root_NPC_Attack_Melee",
+    "AttackPauseRange": [
+      1,
+      2.5
+    ],
+    "AttackDistance": 2.5,
+    "ChaseRelativeSpeed": 0.7,
+    "CombatMovingRelativeSpeed": 0.7,
+    "CombatStrafingDurationRange": [
+      2,
+      3
+    ],
+    "CombatStrafingFrequencyRange": [
+      1,
+      1
+    ],
+    "AlwaysSleepAtNight": false,
+    "NightFlavorAnimation": "",
+    "DayTimeNapWeight": 0,
+    "_InteractionVars": {
+      "Melee_Start": {
+        "Interactions": [
+          {
+            "Parent": "NPC_Attack_Melee_Simple",
+            "$Comment": "Sets animations and delay before hit",
+            "Effects": {
+              "ItemPlayerAnimationsId": "Leopard_Snow_Default",
+              "ItemAnimationId": "Bite"
+            },
+            "RunTime": 0.333
+          }
+        ]
+      },
+      "Melee_Damage": {
+        "Interactions": [
+          {
+            "Parent": "NPC_Attack_Melee_Damage",
+            "$Comment": "Sets damage and onhit effects",
+            "DamageCalculator": {
+              "Type": "Absolute",
+              "BaseDamage": {
+                "Physical": 46
+              },
+              "RandomPercentageModifier": 0.1
+            }
+          }
+        ]
+      }
+    },
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Leopard_Snow.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

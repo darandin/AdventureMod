@@ -31,6 +31,9 @@
     "Attack": "Root_NPC_Scarak_Fighter_Attack",
     "AttackDistance": 4.5,
     "BlockProbability": 0,
+    "_CombatConfig": {
+      "EntityEffect": "Immunity_Environmental"
+    },
     "AttitudeGroup": "Scarak",
     "IsMemory": true,
     "MemoriesCategory": "Scarak",
