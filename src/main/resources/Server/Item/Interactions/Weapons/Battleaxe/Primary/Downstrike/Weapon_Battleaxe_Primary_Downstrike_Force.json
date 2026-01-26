@@ -27,6 +27,7 @@
     "AdjustVertical": true,
     "VerticalClamp": [10, 30],
     "WaitForGround": true,
+    "WaitForCollision": true,
     "Force": 12,
     "Direction": {
       "X": 0,
