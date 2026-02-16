@@ -38,10 +38,7 @@
       "Description": "A range within which the target can be seen/sensed when the NPC is alerted to their presence. Should be higher than sense ranges."
     },
     "AlertedTime": {
-      "Value": [
-        3,
-        5
-      ],
+      "Value": [ 3, 5 ],
       "Description": "How long to wait in an alerted or threatening state before switching to active combat."
     },
     "MaintainDistanceWhileAlerted": {
@@ -53,17 +50,11 @@
       "Description": "Relative movement speed when moving forwards or strafing while in the alerted state. Only applies if MaintainDistanceWhileAlerted is true."
     },
     "AlertedStrafingDurationRange": {
-      "Value": [
-        1,
-        1
-      ],
+      "Value": [ 1, 1 ],
       "Description": "How long to strafe for when in the alerted state. Only applies if MaintainDistanceWhileAlerted is true."
     },
     "AlertedStrafingFrequencyRange": {
-      "Value": [
-        2,
-        2
-      ],
+      "Value": [ 2, 2 ],
       "Description": "How frequently to strafe when in the alerted state. Only applies if MaintainDistanceWhileAlerted is true."
     },
     "FleeIfNotThreatened": {
@@ -75,10 +66,7 @@
       "Description": "An optional animation to play to threaten the target before initiating combat."
     },
     "ThreatenDelayRange": {
-      "Value": [
-        2,
-        4
-      ],
+      "Value": [ 2, 4 ],
       "Description": "Delay before the threaten animation is played."
     },
     "DropList": {
@@ -114,10 +102,7 @@
       "Description": "The distance to attack from."
     },
     "DayTimePeriod": {
-      "Value": [
-        6.01,
-        17.99
-      ],
+      "Value": [ 6.01, 17.99 ],
       "Description": "The hour range considered to be daytime for this NPC."
     },
     "DayTimeNapWeight": {
@@ -125,10 +110,7 @@
       "Description": "Weight used to determine if the NPC should have a short nap during the day. Set to 0 to disable."
     },
     "DayTimeNapTimeRange": {
-      "Value": [
-        10,
-        12
-      ],
+      "Value": [ 10, 12 ],
       "Description": "How long a daytime nap should last."
     },
     "TimidDuringDay": {
@@ -144,10 +126,7 @@
       "Description": "A flavor animation to play at night. Ignored if null or empty."
     },
     "NightFlavorAnimationLength": {
-      "Value": [
-        3,
-        5
-      ],
+      "Value": [ 3, 5 ],
       "Description": "How long to play the night flavor animation."
     },
     "DayFlavorAnimation": {
@@ -155,26 +134,20 @@
       "Description": "A flavor animation to play during the day. Ignored if null or empty."
     },
     "DayFlavorAnimationLength": {
-      "Value": [
-        3,
-        5
-      ],
+      "Value": [ 3, 5 ],
       "Description": "How long to play the daytime flavor animation."
     },
     "AttitudeGroup": {
       "Value": "Predators",
-      "Description": "This NPC\u0027s attitude group."
+      "Description": "This NPC's attitude group."
     },
     "FlockArray": {
-      "Value": [],
+      "Value": [ ],
       "TypeHint": "String",
       "Description": "Array containing NPCs for this flock type."
     },
     "AttackPauseRange": {
-      "Value": [
-        2,
-        3
-      ],
+      "Value": [ 2, 3 ],
       "Description": "The range for absolute minimum time before an NPC can execute a second attack."
     },
     "CombatRelativeTurnSpeed": {
@@ -198,31 +171,19 @@
       "Description": "Weight for the combat strafing movement behavior. Set to 0 to disable."
     },
     "CombatAttackPreDelay": {
-      "Value": [
-        0.3,
-        0.3
-      ],
-      "Description": "The time delay range before the NPC performs an attack, provided it\u0027s in attack range."
+      "Value": [ 0.3, 0.3 ],
+      "Description": "The time delay range before the NPC performs an attack, provided it's in attack range."
     },
     "CombatAttackPostDelay": {
-      "Value": [
-        0.4,
-        0.4
-      ],
-      "Description": "The time delay range after the NPC performs an attack, provided it\u0027s in attack range."
+      "Value": [ 0.4, 0.4 ],
+      "Description": "The time delay range after the NPC performs an attack, provided it's in attack range."
     },
     "CombatStrafingDurationRange": {
-      "Value": [
-        1,
-        1
-      ],
+      "Value": [ 1, 1 ],
       "Description": "How long to strafe for when in the combat strafing movement behavior. Only applies if CombatStrafeWeight is greater than 0."
     },
     "CombatStrafingFrequencyRange": {
-      "Value": [
-        2,
-        2
-      ],
+      "Value": [ 2, 2 ],
       "Description": "How frequently to strafe when in the combat strafing movement behavior. Only applies if CombatStrafeWeight is greater than 0."
     },
     "CombatBackOffAfterAttack": {
@@ -230,21 +191,23 @@
       "Description": "Whether to back off after performing an attack."
     },
     "CombatBackOffDistanceRange": {
-      "Value": [
-        4,
-        4
-      ],
+      "Value": [ 4, 4 ],
       "Description": "How far to back off after performing an attack. Max should be lower than the CombatBehaviorDistance."
     },
     "CombatBackOffDurationRange": {
-      "Value": [
-        2,
-        3
-      ],
+      "Value": [ 2, 3 ],
       "Description": "How long to back off for after performing an attack."
     },
+    "TargetSwitchTimer": {
+      "Value": [ 1, 3 ],
+      "Description": "Minimum time the NPC will be locked onto a single target before switching"
+    },
+    "TargetRange": {
+      "Value": 2.5,
+      "Description": "The distance the target needs to be within to maintain priority over other targets while in combat"
+    },
     "Weapons": {
-      "Value": [],
+      "Value": [ ],
       "TypeHint": "String",
       "Description": "Weapons to equip in hotbar."
     },
@@ -255,6 +218,10 @@
     "BlockProbability": {
       "Value": 50,
       "Description": "The probability this NPC will block when backing away if a BlockAbility is set."
+    },
+    "CombatFleeIfTooCloseDistance": {
+      "Value": 0,
+      "Description": "In combat, if the target gets within this distance for a certain amount of time, the NPC will attempt to flee to a safe distance instead of simply backing away. Set to 0 to disable behavior."
     },
     "AdditionalCombatBehaviorMacroElement": {
       "Value": "Component_Instruction_Null",
@@ -281,9 +248,7 @@
       "Description": "The relative motion speed at which the NPC will investigate a stepped block"
     },
     "BlockStepDetectionIgnoreGroups": {
-      "Value": [
-        "Self"
-      ],
+      "Value": [ "Self" ],
       "Description": "The NPC groups whose steps will be ignored."
     },
     "MaxHealth": {
@@ -308,15 +273,15 @@
     },
     "ClimbSpeedMult": {
       "Value": 0,
-      "Description": "Climb speed multiplier (const \u002B mult * walkspeed^pow)."
+      "Description": "Climb speed multiplier (const + mult * walkspeed^pow)."
     },
     "ClimbSpeedPow": {
       "Value": 1,
-      "Description": "Climb speed power (const \u002B mult * walkspeed^pow)."
+      "Description": "Climb speed power (const + mult * walkspeed^pow)."
     },
     "ClimbSpeedConst": {
       "Value": 5,
-      "Description": "Climb speed constant (const \u002B mult * walkspeed^pow)."
+      "Description": "Climb speed constant (const + mult * walkspeed^pow)."
     },
     "DescendSpeedCompensation": {
       "Value": 0.9,
@@ -343,10 +308,7 @@
       "Description": "The minimum distance from the player before the NPC will be willing to give up on the chase."
     },
     "LeashTimer": {
-      "Value": [
-        3,
-        5
-      ],
+      "Value": [ 3, 5 ],
       "Description": "How long the NPC must be more than the minimum distance form the player and too far from leash before giving up."
     },
     "HardLeashDistance": {
@@ -358,23 +320,15 @@
       "Description": "The relative speed at which the NPC will return to its leash position"
     },
     "ConfusedTimeRange": {
-      "Value": [
-        1,
-        2
-      ],
+      "Value": [ 1, 2 ],
       "Description": "How long the NPC should act confused for when losing its target before beginning the search. While confused the NPC detection range is lowered."
     },
     "SearchTimeRange": {
-      "Value": [
-        5,
-        8
-      ],
+      "Value": [ 5, 8 ],
       "Description": "How long the NPC should actively search for its lost target before giving up and going back to idle."
     },
     "DisableDamageGroups": {
-      "Value": [
-        "Self"
-      ],
+      "Value": [ "Self" ],
       "Description": "Groups not to take damage from."
     },
     "IsMemory": {
@@ -398,107 +352,55 @@
       "Description": "Translation key for NPC name display"
     }
   },
-  "IsMemory": {
-    "Compute": "IsMemory"
-  },
-  "MemoriesCategory": {
-    "Compute": "MemoriesCategory"
-  },
-  "MemoriesNameOverride": {
-    "Compute": "MemoriesNameOverride"
-  },
-  "BreathesInWater": {
-    "Compute": "BreathesInWater"
-  },
-  "Appearance": {
-    "Compute": "Appearance"
-  },
+  "IsMemory": { "Compute": "IsMemory" },
+  "MemoriesCategory": { "Compute": "MemoriesCategory" },
+  "MemoriesNameOverride": { "Compute": "MemoriesNameOverride" },
+  "BreathesInWater": { "Compute": "BreathesInWater" },
+  "Appearance": { "Compute": "Appearance" },
   "StartState": "Idle",
-  "DropList": {
-    "Compute": "DropList"
-  },
-  "HotbarItems": {
-    "Compute": "Weapons"
-  },
-  "DisableDamageGroups": {
-    "Compute": "DisableDamageGroups"
-  },
+  "DropList": { "Compute": "DropList" },
+  "HotbarItems": { "Compute": "Weapons" },
+  "DisableDamageGroups": { "Compute": "DisableDamageGroups" },
   "DefaultNPCAttitude": "Ignore",
   "DefaultPlayerAttitude": "Neutral",
-  "AttitudeGroup": {
-    "Compute": "AttitudeGroup"
-  },
-  "FlockSpawnTypes": {
-    "Compute": "FlockArray"
-  },
-  "FlockAllowedNPC": {
-    "Compute": "FlockArray"
-  },
+  "AttitudeGroup": { "Compute": "AttitudeGroup" },
+  "FlockSpawnTypes": { "Compute": "FlockArray" },
+  "FlockAllowedNPC": { "Compute": "FlockArray" },
   "ApplySeparation": true,
   "SeparationDistance": 2.5,
   "SeparationWeight": 1.2,
   "SeparationDistanceTarget": 1.5,
   "SeparationNearRadiusTarget": 3,
   "SeparationFarRadiusTarget": 8,
-  "KnockbackScale": {
-    "Compute": "KnockbackScale"
-  },
+  "KnockbackScale": { "Compute": "KnockbackScale" },
   "MotionControllerList": [
     {
       "Type": "Walk",
-      "MaxWalkSpeed": {
-        "Compute": "MaxSpeed"
-      },
+      "MaxWalkSpeed": { "Compute": "MaxSpeed" },
       "Gravity": 10,
-      "RunThreshold": {
-        "Compute": "RunThreshold"
-      },
+      "RunThreshold": { "Compute": "RunThreshold" },
       "RunThresholdRange": 0.05,
       "MaxFallSpeed": 15,
       "MaxRotationSpeed": 180,
       "Acceleration": 10,
-      "MaxClimbHeight": {
-        "Compute": "ClimbHeight"
-      },
-      "MinJumpHeight": {
-        "Compute": "MinJumpHeight"
-      },
-      "AscentAnimationType": {
-        "Compute": "AscentAnimationType"
-      },
-      "ClimbSpeedMult": {
-        "Compute": "ClimbSpeedMult"
-      },
-      "ClimbSpeedPow": {
-        "Compute": "ClimbSpeedPow"
-      },
-      "ClimbSpeedConst": {
-        "Compute": "ClimbSpeedConst"
-      },
-      "DescendSpeedCompensation": {
-        "Compute": "DescendSpeedCompensation"
-      },
-      "DescendFlatness": {
-        "Compute": "DescendFlatness"
-      },
-      "DescentSteepness": {
-        "Compute": "DescentSteepness"
-      },
-      "DescentBlending": {
-        "Compute": "DescentBlending"
-      }
+      "MaxClimbHeight": { "Compute": "ClimbHeight" },
+      "MinJumpHeight": { "Compute": "MinJumpHeight" },
+      "AscentAnimationType": { "Compute": "AscentAnimationType" },
+      "ClimbSpeedMult": { "Compute": "ClimbSpeedMult" },
+      "ClimbSpeedPow": { "Compute": "ClimbSpeedPow" },
+      "ClimbSpeedConst": { "Compute": "ClimbSpeedConst" },
+      "DescendSpeedCompensation": { "Compute": "DescendSpeedCompensation" },
+      "DescendFlatness": { "Compute": "DescendFlatness" },
+      "DescentSteepness": { "Compute": "DescentSteepness" },
+      "DescentBlending": { "Compute": "DescentBlending" }
     }
   ],
   "StateTransitions": [
     {
       "States": [
         {
-          "From": [
-            "Idle"
-          ],
-          "To": [
-            "Sleep"
-          ]
+          "From": [ "Idle" ],
+          "To": [ "Sleep" ]
         }
       ],
       "Actions": {
@@ -508,13 +410,8 @@
     {
       "States": [
         {
-          "From": [
-            "Sleep"
-          ],
-          "To": [
-            "Alerted",
-            "Idle"
-          ]
+          "From": [ "Sleep" ],
+          "To": [ "Alerted", "Idle" ]
         }
       ],
       "Actions": {
@@ -525,10 +422,8 @@
       "$Comment": "Always clear animation when moving from Alerted state.",
       "States": [
         {
-          "To": [],
-          "From": [
-            "Alerted"
-          ]
+          "To": [ ],
+          "From": [ "Alerted" ]
         }
       ],
       "Actions": [
@@ -547,10 +442,8 @@
       "$Comment": "Always clear crouching status when moving from Idle state.",
       "States": [
         {
-          "To": [],
-          "From": [
-            "Idle"
-          ]
+          "To": [ ],
+          "From": [ "Idle" ]
         }
       ],
       "Actions": [
@@ -564,10 +457,8 @@
       "$Comment": "Always clear target and reset instructions when going back to idle.",
       "States": [
         {
-          "To": [
-            "Idle"
-          ],
-          "From": []
+          "To": [ "Idle" ],
+          "From": [ ]
         }
       ],
       "Actions": [
@@ -580,9 +471,7 @@
       ]
     }
   ],
-  "MaxHealth": {
-    "Compute": "MaxHealth"
-  },
+  "MaxHealth": { "Compute": "MaxHealth" },
   "InteractionVars": {
     "Melee_Damage": {
       "Interactions": [
@@ -602,14 +491,25 @@
   },
   "Instructions": [
     {
+      "Continue": true,
+      "Sensor": {
+        "Type": "Leash",
+        "Range": { "Compute": "HardLeashDistance" }
+      },
+      "Actions": [
+        {
+          "Type": "SetLeashPosition",
+          "ToCurrent": true
+        }
+      ]
+    },
+    {
       "$Comment": "This is separate so it can run all the time regardless of the rest of the script",
       "Continue": true,
       "Instructions": [
         {
           "$Comment": "Update flock member leash positions to match the leader.",
-          "Enabled": {
-            "Compute": "!isEmptyStringArray(FlockArray)"
-          },
+          "Enabled": { "Compute": "!isEmptyStringArray(FlockArray)" },
           "Continue": true,
           "Sensor": {
             "Type": "And",
@@ -631,10 +531,7 @@
           "Actions": [
             {
               "Type": "Timeout",
-              "Delay": [
-                0.5,
-                2
-              ],
+              "Delay": [ 0.5, 2 ],
               "Action": {
                 "Type": "SetLeashPosition",
                 "ToTarget": true
@@ -644,9 +541,7 @@
         },
         {
           "$Comment": "Join eligible flocks if not a member of a flock.",
-          "Enabled": {
-            "Compute": "!isEmptyStringArray(FlockArray)"
-          },
+          "Enabled": { "Compute": "!isEmptyStringArray(FlockArray)" },
           "Sensor": {
             "Type": "Mob",
             "Range": 20,
@@ -655,9 +550,7 @@
             "Filters": [
               {
                 "Type": "NPCGroup",
-                "IncludeGroups": [
-                  "Self"
-                ]
+                "IncludeGroups": [ "Self" ]
               },
               {
                 "Type": "Flock",
@@ -683,16 +576,12 @@
           "Instructions": [
             {
               "$Comment": "Switch to combat state if any flock member engages a target.",
-              "Enabled": {
-                "Compute": "!isEmptyStringArray(FlockArray)"
-              },
+              "Enabled": { "Compute": "!isEmptyStringArray(FlockArray)" },
               "Sensor": {
                 "Type": "Beacon",
                 "Message": "Flock_Attack",
                 "TargetSlot": "LockedTarget",
-                "Range": {
-                  "Compute": "HearingRange"
-                }
+                "Range": { "Compute": "HearingRange" }
               },
               "Actions": [
                 {
@@ -712,26 +601,15 @@
               },
               "Instructions": [
                 {
-                  "$Comment": "If there\u0027s someone who could have caused the damage, target them.",
+                  "$Comment": "If there's someone who could have caused the damage, target them.",
                   "Sensor": {
                     "Reference": "Component_Sensor_Standard_Detection",
                     "Modify": {
-                      "ViewRange": {
-                        "Compute": "AlertedRange"
-                      },
-                      "ViewSector": {
-                        "Compute": "ViewSector"
-                      },
-                      "HearingRange": {
-                        "Compute": "HearingRange"
-                      },
-                      "AbsoluteDetectionRange": {
-                        "Compute": "AbsoluteDetectionRange"
-                      },
-                      "Attitudes": [
-                        "Hostile",
-                        "Neutral"
-                      ]
+                      "ViewRange": { "Compute": "AlertedRange" },
+                      "ViewSector": { "Compute": "ViewSector" },
+                      "HearingRange": { "Compute": "HearingRange" },
+                      "AbsoluteDetectionRange": { "Compute": "AbsoluteDetectionRange" },
+                      "Attitudes": [ "Hostile", "Neutral" ]
                     }
                   },
                   "Actions": [
@@ -757,22 +635,11 @@
               "Sensor": {
                 "Reference": "Component_Sensor_Standard_Detection",
                 "Modify": {
-                  "ViewRange": {
-                    "Compute": "ViewRange"
-                  },
-                  "ViewSector": {
-                    "Compute": "ViewSector"
-                  },
-                  "HearingRange": {
-                    "Compute": "HearingRange"
-                  },
-                  "AbsoluteDetectionRange": {
-                    "Compute": "AbsoluteDetectionRange"
-                  },
-                  "Attitudes": [
-                    "Hostile",
-                    "Neutral"
-                  ]
+                  "ViewRange": { "Compute": "ViewRange" },
+                  "ViewSector": { "Compute": "ViewSector" },
+                  "HearingRange": { "Compute": "HearingRange" },
+                  "AbsoluteDetectionRange": { "Compute": "AbsoluteDetectionRange" },
+                  "Attitudes": [ "Hostile", "Neutral" ]
                 }
               },
               "Actions": [
@@ -784,44 +651,30 @@
             },
             {
               "$Comment": "Block step detection",
-              "Enabled": {
-                "Compute": "!isEmpty(BlockStepDetectionBlockSet) \u0026\u0026 BlockStepDetectionRange \u003E 0"
-              },
+              "Enabled": { "Compute": "!isEmpty(BlockStepDetectionBlockSet) && BlockStepDetectionRange > 0" },
               "Sensor": {
                 "Type": "Mob",
-                "GetPlayers": {
-                  "Compute": "BlockStepDetectionIncludePlayers"
-                },
-                "GetNPCs": {
-                  "Compute": "BlockStepDetectionIncludeNPCs"
-                },
-                "Range": {
-                  "Compute": "BlockStepDetectionRange"
-                },
+                "GetPlayers": { "Compute": "BlockStepDetectionIncludePlayers" },
+                "GetNPCs": { "Compute": "BlockStepDetectionIncludeNPCs" },
+                "Range": { "Compute": "BlockStepDetectionRange" },
                 "Filters": [
                   {
                     "Type": "Or",
                     "Filters": [
                       {
                         "Type": "StandingOnBlock",
-                        "BlockSet": {
-                          "Compute": "BlockStepDetectionBlockSet"
-                        }
+                        "BlockSet": { "Compute": "BlockStepDetectionBlockSet" }
                       },
                       {
                         "$Comment": "Necessary for passable blocks such as webs",
                         "Type": "InsideBlock",
-                        "BlockSet": {
-                          "Compute": "BlockStepDetectionBlockSet"
-                        }
+                        "BlockSet": { "Compute": "BlockStepDetectionBlockSet" }
                       }
                     ]
                   },
                   {
                     "Type": "NPCGroup",
-                    "ExcludeGroups": {
-                      "Compute": "BlockStepDetectionIgnoreGroups"
-                    }
+                    "ExcludeGroups": { "Compute": "BlockStepDetectionIgnoreGroups" }
                   }
                 ]
               },
@@ -837,22 +690,17 @@
               ]
             },
             {
-              "$Comment": "If we\u0027re beyond our soft leash radius for a set period of time, return home.",
+              "$Comment": "If we're beyond our soft leash radius for a set period of time, return home.",
               "Continue": true,
               "Sensor": {
                 "Type": "Leash",
-                "Range": {
-                  "Compute": "LeashDistance"
-                }
+                "Range": { "Compute": "LeashDistance" }
               },
               "ActionsBlocking": true,
               "Actions": [
                 {
                   "Type": "Timeout",
-                  "Delay": [
-                    15,
-                    20
-                  ]
+                  "Delay": [ 15, 20 ]
                 },
                 {
                   "Type": "State",
@@ -863,15 +711,10 @@
             {
               "$Comment": "Execute daytime idle behaviors.",
               "Type": "Random",
-              "ExecuteFor": [
-                15,
-                20
-              ],
+              "ExecuteFor": [ 15, 20 ],
               "Sensor": {
                 "Type": "Time",
-                "Period": {
-                  "Compute": "DayTimePeriod"
-                },
+                "Period": { "Compute": "DayTimePeriod" },
                 "CheckDay": true
               },
               "Instructions": [
@@ -891,12 +734,8 @@
                     {
                       "Reference": "Component_Instruction_Leash_To_Flock_Leader",
                       "Modify": {
-                        "Enabled": {
-                          "Compute": "!isEmptyStringArray(FlockArray)"
-                        },
-                        "WanderRadius": {
-                          "Compute": "WanderRadius"
-                        },
+                        "Enabled": { "Compute": "!isEmptyStringArray(FlockArray)" },
+                        "WanderRadius": { "Compute": "WanderRadius" },
                         "StopDistance": 3
                       }
                     },
@@ -907,25 +746,17 @@
                         "Motions": [
                           {
                             "Type": "Timer",
-                            "Time": [
-                              1,
-                              5
-                            ],
+                            "Time": [ 1, 5 ],
                             "Motion": {
                               "Type": "WanderInCircle",
-                              "Radius": {
-                                "Compute": "WanderRadius"
-                              },
+                              "Radius": { "Compute": "WanderRadius" },
                               "MaxHeadingChange": 60,
                               "RelativeSpeed": 0.18
                             }
                           },
                           {
                             "Type": "Timer",
-                            "Time": [
-                              3,
-                              8
-                            ],
+                            "Time": [ 3, 8 ],
                             "Motion": {
                               "Type": "Nothing"
                             }
@@ -937,9 +768,7 @@
                 },
                 {
                   "$Comment": "Play a daytime flavor animation.",
-                  "Enabled": {
-                    "Compute": "!isEmpty(DayFlavorAnimation)"
-                  },
+                  "Enabled": { "Compute": "!isEmpty(DayFlavorAnimation)" },
                   "Weight": 3,
                   "Instructions": [
                     {
@@ -948,15 +777,11 @@
                         {
                           "Type": "PlayAnimation",
                           "Slot": "Status",
-                          "Animation": {
-                            "Compute": "DayFlavorAnimation"
-                          }
+                          "Animation": { "Compute": "DayFlavorAnimation" }
                         },
                         {
                           "Type": "Timeout",
-                          "Delay": {
-                            "Compute": "DayFlavorAnimationLength"
-                          }
+                          "Delay": { "Compute": "DayFlavorAnimationLength" }
                         },
                         {
                           "Type": "PlayAnimation",
@@ -971,12 +796,8 @@
                 },
                 {
                   "$Comment": "Nap.",
-                  "Enabled": {
-                    "Compute": "DayTimeNapWeight \u003E 0"
-                  },
-                  "Weight": {
-                    "Compute": "DayTimeNapWeight"
-                  },
+                  "Enabled": { "Compute": "DayTimeNapWeight > 0" },
+                  "Weight": { "Compute": "DayTimeNapWeight" },
                   "Instructions": [
                     {
                       "Actions": [
@@ -991,16 +812,11 @@
               ]
             },
             {
-              "Enabled": {
-                "Compute": "AlwaysSleepAtNight"
-              },
+              "Enabled": { "Compute": "AlwaysSleepAtNight" },
               "Actions": [
                 {
                   "Type": "Timeout",
-                  "Delay": [
-                    2,
-                    4
-                  ],
+                  "Delay": [ 2, 4 ],
                   "Action": {
                     "Type": "Sequence",
                     "Actions": [
@@ -1014,12 +830,9 @@
               ]
             },
             {
-              "$Comment": "Execute nighttime idle behaviors if we\u0027re an NPC that doesn\u0027t always sleep at night.",
+              "$Comment": "Execute nighttime idle behaviors if we're an NPC that doesn't always sleep at night.",
               "Type": "Random",
-              "ExecuteFor": [
-                15,
-                20
-              ],
+              "ExecuteFor": [ 15, 20 ],
               "Instructions": [
                 {
                   "$Comment": "Regular wander.",
@@ -1037,12 +850,8 @@
                     {
                       "Reference": "Component_Instruction_Leash_To_Flock_Leader",
                       "Modify": {
-                        "Enabled": {
-                          "Compute": "!isEmptyStringArray(FlockArray)"
-                        },
-                        "WanderRadius": {
-                          "Compute": "WanderRadius"
-                        },
+                        "Enabled": { "Compute": "!isEmptyStringArray(FlockArray)" },
+                        "WanderRadius": { "Compute": "WanderRadius" },
                         "StopDistance": 3
                       }
                     },
@@ -1053,25 +862,17 @@
                         "Motions": [
                           {
                             "Type": "Timer",
-                            "Time": [
-                              1,
-                              5
-                            ],
+                            "Time": [ 1, 5 ],
                             "Motion": {
                               "Type": "WanderInCircle",
-                              "Radius": {
-                                "Compute": "WanderRadius"
-                              },
+                              "Radius": { "Compute": "WanderRadius" },
                               "MaxHeadingChange": 60,
                               "RelativeSpeed": 0.18
                             }
                           },
                           {
                             "Type": "Timer",
-                            "Time": [
-                              3,
-                              8
-                            ],
+                            "Time": [ 3, 8 ],
                             "Motion": {
                               "Type": "Nothing"
                             }
@@ -1097,12 +898,8 @@
                     {
                       "Reference": "Component_Instruction_Leash_To_Flock_Leader",
                       "Modify": {
-                        "Enabled": {
-                          "Compute": "!isEmptyStringArray(FlockArray)"
-                        },
-                        "WanderRadius": {
-                          "Compute": "WanderRadius"
-                        },
+                        "Enabled": { "Compute": "!isEmptyStringArray(FlockArray)" },
+                        "WanderRadius": { "Compute": "WanderRadius" },
                         "StopDistance": 3
                       }
                     },
@@ -1113,25 +910,17 @@
                         "Motions": [
                           {
                             "Type": "Timer",
-                            "Time": [
-                              1,
-                              5
-                            ],
+                            "Time": [ 1, 5 ],
                             "Motion": {
                               "Type": "WanderInCircle",
-                              "Radius": {
-                                "Compute": "WanderRadius"
-                              },
+                              "Radius": { "Compute": "WanderRadius" },
                               "MaxHeadingChange": 60,
                               "RelativeSpeed": 0.1
                             }
                           },
                           {
                             "Type": "Timer",
-                            "Time": [
-                              3,
-                              8
-                            ],
+                            "Time": [ 3, 8 ],
                             "Motion": {
                               "Type": "Nothing"
                             }
@@ -1143,9 +932,7 @@
                 },
                 {
                   "$Comment": "Play a night-time flavor animation.",
-                  "Enabled": {
-                    "Compute": "!isEmpty(NightFlavorAnimation)"
-                  },
+                  "Enabled": { "Compute": "!isEmpty(NightFlavorAnimation)" },
                   "Weight": 3,
                   "Instructions": [
                     {
@@ -1154,15 +941,11 @@
                         {
                           "Type": "PlayAnimation",
                           "Slot": "Status",
-                          "Animation": {
-                            "Compute": "NightFlavorAnimation"
-                          }
+                          "Animation": { "Compute": "NightFlavorAnimation" }
                         },
                         {
                           "Type": "Timeout",
-                          "Delay": {
-                            "Compute": "NightFlavorAnimationLength"
-                          }
+                          "Delay": { "Compute": "NightFlavorAnimationLength" }
                         },
                         {
                           "Type": "PlayAnimation",
@@ -1176,15 +959,12 @@
                   ]
                 },
                 {
-                  "$Comment": "Very low chance of sleeping at night since they\u0027ll stay asleep all night then.",
+                  "$Comment": "Very low chance of sleeping at night since they'll stay asleep all night then.",
                   "Weight": 1,
                   "Actions": [
                     {
                       "Type": "Timeout",
-                      "Delay": [
-                        2,
-                        4
-                      ],
+                      "Delay": [ 2, 4 ],
                       "Action": {
                         "Type": "Sequence",
                         "Actions": [
@@ -1209,9 +989,7 @@
           "Instructions": [
             {
               "$Comment": "Wake up if an enemy attacks a flock member.",
-              "Enabled": {
-                "Compute": "!isEmptyStringArray(FlockArray)"
-              },
+              "Enabled": { "Compute": "!isEmptyStringArray(FlockArray)" },
               "Sensor": {
                 "Type": "Beacon",
                 "Message": "Flock_Attack",
@@ -1226,9 +1004,7 @@
             },
             {
               "$Comment": "Just a little nap.",
-              "Enabled": {
-                "Compute": "DayTimeNapWeight \u003E 0"
-              },
+              "Enabled": { "Compute": "DayTimeNapWeight > 0" },
               "Sensor": {
                 "Type": "State",
                 "State": ".Nap"
@@ -1245,12 +1021,8 @@
                     {
                       "Type": "TimerStart",
                       "Name": "NapTimer",
-                      "StartValueRange": {
-                        "Compute": "DayTimeNapTimeRange"
-                      },
-                      "RestartValueRange": {
-                        "Compute": "DayTimeNapTimeRange"
-                      }
+                      "StartValueRange": { "Compute": "DayTimeNapTimeRange" },
+                      "RestartValueRange": { "Compute": "DayTimeNapTimeRange" }
                     },
                     {
                       "Type": "TimerRestart",
@@ -1261,19 +1033,9 @@
                 {
                   "Reference": "Component_Instruction_Wild_Sleep_State",
                   "Modify": {
-                    "_ExportStates": [
-                      "Combat.Message",
-                      "Panic",
-                      "Alerted",
-                      "Idle"
-                    ],
-                    "HearingRange": {
-                      "Compute": "HearingRange"
-                    },
-                    "Attitudes": [
-                      "Hostile",
-                      "Neutral"
-                    ],
+                    "_ExportStates": [ "Combat.Message", "Panic", "Alerted", "Idle" ],
+                    "HearingRange": { "Compute": "HearingRange" },
+                    "Attitudes": [ "Hostile", "Neutral" ],
                     "WakeupSensor": "Component_Sensor_Timed_Nap"
                   }
                 }
@@ -1285,22 +1047,10 @@
                 {
                   "Reference": "Component_Instruction_Wild_Sleep_State",
                   "Modify": {
-                    "_ExportStates": [
-                      "Combat.Message",
-                      "Panic",
-                      "Alerted",
-                      "Idle"
-                    ],
-                    "HearingRange": {
-                      "Compute": "HearingRange"
-                    },
-                    "Attitudes": [
-                      "Hostile",
-                      "Neutral"
-                    ],
-                    "DayTimePeriod": {
-                      "Compute": "DayTimePeriod"
-                    }
+                    "_ExportStates": [ "Combat.Message", "Panic", "Alerted", "Idle" ],
+                    "HearingRange": { "Compute": "HearingRange" },
+                    "Attitudes": [ "Hostile", "Neutral" ],
+                    "DayTimePeriod": { "Compute": "DayTimePeriod" }
                   }
                 }
               ]
@@ -1333,19 +1083,13 @@
                 },
                 {
                   "Type": "SpawnParticles",
-                  "Offset": [
-                    0,
-                    0.8,
-                    0
-                  ],
+                  "Offset": [ 0, 0.8, 0 ],
                   "ParticleSystem": "Alerted"
                 }
               ]
             },
             {
-              "Enabled": {
-                "Compute": "!isEmpty(ThreatenAnimation)"
-              },
+              "Enabled": { "Compute": "!isEmpty(ThreatenAnimation)" },
               "Continue": true,
               "Sensor": {
                 "Type": "Flag",
@@ -1355,16 +1099,12 @@
               "Actions": [
                 {
                   "Type": "Timeout",
-                  "Delay": {
-                    "Compute": "ThreatenDelayRange"
-                  }
+                  "Delay": { "Compute": "ThreatenDelayRange" }
                 },
                 {
                   "Type": "PlayAnimation",
                   "Slot": "Status",
-                  "Animation": {
-                    "Compute": "ThreatenAnimation"
-                  }
+                  "Animation": { "Compute": "ThreatenAnimation" }
                 },
                 {
                   "Type": "SetFlag",
@@ -1389,31 +1129,27 @@
               "Continue": true,
               "Sensor": {
                 "Type": "Target",
-                "Range": {
-                  "Compute": "AlertedRange"
-                }
+                "Range": { "Compute": "AlertedRange" },
+                "Filters": [
+                  {
+                    "Type": "LineOfSight"
+                  }
+                ]
               },
               "HeadMotion": {
                 "Type": "Watch"
               }
             },
             {
-              "Enabled": {
-                "Compute": "!FleeIfNotThreatened \u0026\u0026 AbsoluteDetectionRange \u003E 0"
-              },
+              "Enabled": { "Compute": "!FleeIfNotThreatened && AbsoluteDetectionRange > 0" },
               "Sensor": {
                 "Type": "Target",
-                "Range": {
-                  "Compute": "AbsoluteDetectionRange"
-                }
+                "Range": { "Compute": "AbsoluteDetectionRange" }
               },
               "Actions": [
                 {
                   "Type": "Timeout",
-                  "Delay": [
-                    0.1,
-                    0.1
-                  ],
+                  "Delay": [ 0.1, 0.1 ],
                   "Action": {
                     "Type": "State",
                     "State": "Combat.Message"
@@ -1425,9 +1161,7 @@
               "Sensor": {
                 "Type": "ReadPosition",
                 "Slot": "SteppedBlock",
-                "Range": {
-                  "Compute": "BlockStepDetectionRange"
-                }
+                "Range": { "Compute": "BlockStepDetectionRange" }
               },
               "Actions": [
                 {
@@ -1441,19 +1175,14 @@
                 "Type": "Not",
                 "Sensor": {
                   "Type": "Target",
-                  "Range": {
-                    "Compute": "AlertedRange"
-                  }
+                  "Range": { "Compute": "AlertedRange" }
                 }
               },
               "ActionsAtomic": true,
               "Actions": [
                 {
                   "Type": "Timeout",
-                  "Delay": [
-                    0.5,
-                    0.5
-                  ]
+                  "Delay": [ 0.5, 0.5 ]
                 },
                 {
                   "Type": "State",
@@ -1462,9 +1191,7 @@
               ]
             },
             {
-              "Enabled": {
-                "Compute": "TimidDuringDay"
-              },
+              "Enabled": { "Compute": "TimidDuringDay" },
               "Sensor": {
                 "Type": "And",
                 "Sensors": [
@@ -1473,17 +1200,13 @@
                     "Filters": [
                       {
                         "Type": "Attitude",
-                        "Attitudes": [
-                          "Neutral"
-                        ]
+                        "Attitudes": [ "Neutral" ]
                       }
                     ]
                   },
                   {
                     "Type": "Time",
-                    "Period": {
-                      "Compute": "DayTimePeriod"
-                    },
+                    "Period": { "Compute": "DayTimePeriod" },
                     "CheckDay": true
                   }
                 ]
@@ -1495,9 +1218,7 @@
                     "Sensors": [
                       {
                         "Type": "Target",
-                        "Range": {
-                          "Compute": "AlertedRange"
-                        }
+                        "Range": { "Compute": "AlertedRange" }
                       },
                       {
                         "Type": "Target",
@@ -1522,10 +1243,7 @@
                   "Actions": [
                     {
                       "Type": "Timeout",
-                      "Delay": [
-                        0.2,
-                        0.2
-                      ],
+                      "Delay": [ 0.2, 0.2 ],
                       "Action": {
                         "Type": "State",
                         "State": "Flee"
@@ -1536,17 +1254,12 @@
                 {
                   "Sensor": {
                     "Type": "Target",
-                    "Range": {
-                      "Compute": "AlertedRange"
-                    }
+                    "Range": { "Compute": "AlertedRange" }
                   },
                   "Actions": [
                     {
                       "Type": "Timeout",
-                      "Delay": [
-                        4,
-                        4
-                      ],
+                      "Delay": [ 4, 4 ],
                       "Action": {
                         "Type": "State",
                         "State": "Flee"
@@ -1557,18 +1270,14 @@
               ]
             },
             {
-              "Enabled": {
-                "Compute": "!FleeIfNotThreatened"
-              },
+              "Enabled": { "Compute": "!FleeIfNotThreatened" },
               "$Comment": "If the target moves, start chase",
               "Sensor": {
                 "Type": "And",
                 "Sensors": [
                   {
                     "Type": "Target",
-                    "Range": {
-                      "Compute": "AlertedRange"
-                    }
+                    "Range": { "Compute": "AlertedRange" }
                   },
                   {
                     "Type": "Target",
@@ -1588,10 +1297,7 @@
               "Actions": [
                 {
                   "Type": "Timeout",
-                  "Delay": [
-                    0.5,
-                    0.5
-                  ],
+                  "Delay": [ 0.5, 0.5 ],
                   "Action": {
                     "Type": "State",
                     "State": "Combat.Message"
@@ -1601,67 +1307,42 @@
             },
             {
               "Continue": true,
-              "Enabled": {
-                "Compute": "MaintainDistanceWhileAlerted"
-              },
+              "Enabled": { "Compute": "MaintainDistanceWhileAlerted" },
               "Sensor": {
                 "Type": "Target",
-                "Range": {
-                  "Compute": "AlertedRange"
-                }
+                "Range": { "Compute": "AlertedRange" }
               },
               "BodyMotion": {
                 "Type": "MaintainDistance",
-                "DesiredDistanceRange": {
-                  "Compute": "makeRange(ViewRange)"
-                },
-                "RelativeForwardsSpeed": {
-                  "Compute": "AlertedRelativeForwardsSpeed"
-                },
-                "RelativeBackwardsSpeed": {
-                  "Compute": "AlertedRelativeForwardsSpeed"
-                },
-                "StrafingDurationRange": {
-                  "Compute": "AlertedStrafingDurationRange"
-                },
-                "StrafingFrequencyRange": {
-                  "Compute": "AlertedStrafingFrequencyRange"
-                }
+                "DesiredDistanceRange": { "Compute": "makeRange(ViewRange)" },
+                "RelativeForwardsSpeed": { "Compute": "AlertedRelativeForwardsSpeed" },
+                "RelativeBackwardsSpeed": { "Compute": "AlertedRelativeForwardsSpeed" },
+                "StrafingDurationRange": { "Compute": "AlertedStrafingDurationRange" },
+                "StrafingFrequencyRange": { "Compute": "AlertedStrafingFrequencyRange" }
               }
             },
             {
               "Sensor": {
                 "Type": "Target",
-                "Range": {
-                  "Compute": "AlertedRange"
-                }
+                "Range": { "Compute": "AlertedRange" }
               },
               "Instructions": [
                 {
-                  "Enabled": {
-                    "Compute": "FleeIfNotThreatened"
-                  },
+                  "Enabled": { "Compute": "FleeIfNotThreatened" },
                   "Sensor": {
                     "Type": "Target",
-                    "Range": {
-                      "Compute": "AlertedRange"
-                    },
+                    "Range": { "Compute": "AlertedRange" },
                     "Filters": [
                       {
                         "Type": "NPCGroup",
-                        "IncludeGroups": [
-                          "PredatorsBig",
-                          "Player"
-                        ]
+                        "IncludeGroups": [ "PredatorsBig", "Player" ]
                       }
                     ]
                   },
                   "Actions": [
                     {
                       "Type": "Timeout",
-                      "Delay": {
-                        "Compute": "AlertedTime"
-                      },
+                      "Delay": { "Compute": "AlertedTime" },
                       "Action": {
                         "Type": "State",
                         "State": "Flee"
@@ -1673,9 +1354,7 @@
                   "Actions": [
                     {
                       "Type": "Timeout",
-                      "Delay": {
-                        "Compute": "AlertedTime"
-                      },
+                      "Delay": { "Compute": "AlertedTime" },
                       "Action": {
                         "Type": "State",
                         "State": "Combat.Message"
@@ -1713,18 +1392,27 @@
             },
             {
               "Sensor": {
+                "Type": "Damage",
+                "Combat": true
+              },
+              "Actions": [
+                {
+                  "Type": "OverrideAttitude",
+                  "Attitude": "Hostile",
+                  "Duration": 60
+                }
+              ]
+            },
+            {
+              "Sensor": {
                 "Type": "State",
                 "State": ".Maybe"
               },
               "Type": "Random",
               "Instructions": [
                 {
-                  "Enabled": {
-                    "Compute": "ChanceToBeAlertedWhenFlockAlerted \u003E 0"
-                  },
-                  "Weight": {
-                    "Compute": "ChanceToBeAlertedWhenFlockAlerted"
-                  },
+                  "Enabled": { "Compute": "ChanceToBeAlertedWhenFlockAlerted > 0" },
+                  "Weight": { "Compute": "ChanceToBeAlertedWhenFlockAlerted" },
                   "Actions": [
                     {
                       "Type": "State",
@@ -1733,12 +1421,8 @@
                   ]
                 },
                 {
-                  "Enabled": {
-                    "Compute": "ChanceToBeAlertedWhenFlockAlerted \u003C 100"
-                  },
-                  "Weight": {
-                    "Compute": "100 - ChanceToBeAlertedWhenFlockAlerted"
-                  },
+                  "Enabled": { "Compute": "ChanceToBeAlertedWhenFlockAlerted < 100" },
+                  "Weight": { "Compute": "100 - ChanceToBeAlertedWhenFlockAlerted" },
                   "Actions": [
                     {
                       "Type": "State",
@@ -1767,6 +1451,21 @@
               ]
             },
             {
+              "Reference": "Component_Instruction_Combat_Retreat",
+              "Modify": {
+                "CombatFleeIfTooCloseDistance": { "Compute": "CombatFleeIfTooCloseDistance" },
+                "AttackDistance": { "Compute": "AttackDistance" }
+              }
+            },
+            {
+              "Reference": "Component_Instruction_Combat_Target_Swap",
+              "Modify": {
+                "TargetSwitchTimer": { "Compute": "TargetSwitchTimer" },
+                "TargetRange": { "Compute": "TargetRange" },
+                "NextTargetRange": { "Compute": "max(ViewRange, HearingRange)" }
+              }
+            },
+            {
               "Sensor": {
                 "Type": "State",
                 "State": ".Chase"
@@ -1775,9 +1474,7 @@
                 {
                   "Sensor": {
                     "Type": "Target",
-                    "Range": {
-                      "Compute": "AttackDistance"
-                    },
+                    "Range": { "Compute": "AttackDistance" },
                     "Filters": [
                       {
                         "Type": "LineOfSight"
@@ -1794,40 +1491,20 @@
                 {
                   "Reference": "Component_Instruction_Soft_Leash",
                   "Modify": {
-                    "_ExportStates": [
-                      "ReturnHome"
-                    ],
-                    "LeashDistance": {
-                      "Compute": "LeashDistance"
-                    },
-                    "LeashMinPlayerDistance": {
-                      "Compute": "LeashMinPlayerDistance"
-                    },
-                    "LeashTimer": {
-                      "Compute": "LeashTimer"
-                    },
-                    "HardLeashDistance": {
-                      "Compute": "HardLeashDistance"
-                    }
+                    "_ExportStates": [ "ReturnHome" ],
+                    "LeashDistance": { "Compute": "LeashDistance" },
+                    "LeashMinPlayerDistance": { "Compute": "LeashMinPlayerDistance" },
+                    "LeashTimer": { "Compute": "LeashTimer" },
+                    "HardLeashDistance": { "Compute": "HardLeashDistance" }
                   }
                 },
                 {
                   "Reference": "Component_Instruction_Intelligent_Chase",
                   "Modify": {
-                    "_ExportStates": [
-                      "Search.Confused",
-                      "Search.Confused",
-                      "ReturnHome"
-                    ],
-                    "ViewRange": {
-                      "Compute": "AlertedRange"
-                    },
-                    "HearingRange": {
-                      "Compute": "HearingRange"
-                    },
-                    "RelativeSpeed": {
-                      "Compute": "ChaseRelativeSpeed"
-                    }
+                    "_ExportStates": [ "Search.Confused", "Search.Confused", "ReturnHome" ],
+                    "ViewRange": { "Compute": "AlertedRange" },
+                    "HearingRange": { "Compute": "HearingRange" },
+                    "RelativeSpeed": { "Compute": "ChaseRelativeSpeed" }
                   }
                 }
               ]
@@ -1837,9 +1514,7 @@
               "$Comment": "TODO: This Continue causes moving while attacking to maintain distance",
               "Sensor": {
                 "Type": "Target",
-                "Range": {
-                  "Compute": "AttackDistance"
-                },
+                "Range": { "Compute": "AttackDistance" },
                 "Filters": [
                   {
                     "Type": "LineOfSight"
@@ -1851,35 +1526,23 @@
                 {
                   "$Comment": "TODO: Brief delay before attack so NPC can stop moving. Do we need it?",
                   "Type": "Timeout",
-                  "Delay": {
-                    "Compute": "CombatAttackPreDelay"
-                  }
+                  "Delay": { "Compute": "CombatAttackPreDelay" }
                 },
                 {
                   "Type": "Attack",
-                  "Attack": {
-                    "Compute": "Attack"
-                  },
-                  "AttackPauseRange": {
-                    "Compute": "AttackPauseRange"
-                  }
+                  "Attack": { "Compute": "Attack" },
+                  "AttackPauseRange": { "Compute": "AttackPauseRange" }
                 },
                 {
                   "$Comment": "Brief delay to prevent the NPC potentially strafing/backing away and missing the shot.",
                   "Type": "Timeout",
-                  "Delay": {
-                    "Compute": "CombatAttackPostDelay"
-                  }
+                  "Delay": { "Compute": "CombatAttackPostDelay" }
                 },
                 {
                   "Type": "TimerStart",
                   "Name": "Combat_Back_Off",
-                  "StartValueRange": {
-                    "Compute": "CombatBackOffDurationRange"
-                  },
-                  "RestartValueRange": {
-                    "Compute": "CombatBackOffDurationRange"
-                  }
+                  "StartValueRange": { "Compute": "CombatBackOffDurationRange" },
+                  "RestartValueRange": { "Compute": "CombatBackOffDurationRange" }
                 },
                 {
                   "Type": "TimerRestart",
@@ -1888,9 +1551,7 @@
               ],
               "HeadMotion": {
                 "Type": "Aim",
-                "RelativeTurnSpeed": {
-                  "Compute": "CombatRelativeTurnSpeed"
-                }
+                "RelativeTurnSpeed": { "Compute": "CombatRelativeTurnSpeed" }
               }
             },
             {
@@ -1902,9 +1563,7 @@
                     "Type": "Not",
                     "Sensor": {
                       "Type": "Target",
-                      "Range": {
-                        "Compute": "AttackDistance"
-                      }
+                      "Range": { "Compute": "AttackDistance" }
                     }
                   },
                   {
@@ -1912,25 +1571,18 @@
                     "Sensors": [
                       {
                         "Type": "Nav",
-                        "NavStates": [
-                          "Defer"
-                        ],
+                        "NavStates": [ "Defer" ],
                         "ThrottleDuration": 3
                       },
                       {
                         "Type": "Target",
-                        "Range": {
-                          "Compute": "CombatBehaviorDistance"
-                        },
+                        "Range": { "Compute": "CombatBehaviorDistance" },
                         "Filters": [
                           {
                             "Type": "Not",
                             "Filter": {
                               "Type": "HeightDifference",
-                              "HeightDifference": [
-                                -2,
-                                2
-                              ]
+                              "HeightDifference": [ -2, 2 ]
                             }
                           }
                         ]
@@ -1943,10 +1595,7 @@
               "Actions": [
                 {
                   "Type": "Timeout",
-                  "Delay": [
-                    5,
-                    5
-                  ]
+                  "Delay": [ 5, 5 ]
                 },
                 {
                   "Type": "State",
@@ -1957,68 +1606,36 @@
             {
               "Reference": "Component_Instruction_Soft_Leash",
               "Modify": {
-                "_ExportStates": [
-                  "ReturnHome"
-                ],
-                "LeashDistance": {
-                  "Compute": "LeashDistance"
-                },
-                "LeashMinPlayerDistance": {
-                  "Compute": "LeashMinPlayerDistance"
-                },
-                "LeashTimer": {
-                  "Compute": "LeashTimer"
-                },
-                "HardLeashDistance": {
-                  "Compute": "HardLeashDistance"
-                }
+                "_ExportStates": [ "ReturnHome" ],
+                "LeashDistance": { "Compute": "LeashDistance" },
+                "LeashMinPlayerDistance": { "Compute": "LeashMinPlayerDistance" },
+                "LeashTimer": { "Compute": "LeashTimer" },
+                "HardLeashDistance": { "Compute": "HardLeashDistance" }
               }
             },
             {
               "Reference": "Component_Instruction_Combat_Back_Off",
               "Modify": {
                 "TimerName": "Combat_Back_Off",
-                "CombatBackOffAfterAttack": {
-                  "Compute": "CombatBackOffAfterAttack"
-                },
-                "CombatBackOffDistanceRange": {
-                  "Compute": "CombatBackOffDistanceRange"
-                },
-                "CombatBackOffDurationRange": {
-                  "Compute": "CombatBackOffDurationRange"
-                },
-                "BlockAbility": {
-                  "Compute": "BlockAbility"
-                },
-                "BlockProbability": {
-                  "Compute": "BlockProbability"
-                },
-                "CombatStrafingDurationRange": {
-                  "Compute": "CombatStrafingDurationRange"
-                },
-                "CombatStrafingFrequencyRange": {
-                  "Compute": "CombatStrafingFrequencyRange"
-                },
-                "CombatBehaviorDistance": {
-                  "Compute": "CombatBehaviorDistance"
-                },
-                "CombatMovingRelativeSpeed": {
-                  "Compute": "CombatMovingRelativeSpeed"
-                }
+                "CombatBackOffAfterAttack": { "Compute": "CombatBackOffAfterAttack" },
+                "CombatBackOffDistanceRange": { "Compute": "CombatBackOffDistanceRange" },
+                "CombatBackOffDurationRange": { "Compute": "CombatBackOffDurationRange" },
+                "BlockAbility": { "Compute": "BlockAbility" },
+                "BlockProbability": { "Compute": "BlockProbability" },
+                "CombatStrafingDurationRange": { "Compute": "CombatStrafingDurationRange" },
+                "CombatStrafingFrequencyRange": { "Compute": "CombatStrafingFrequencyRange" },
+                "CombatBehaviorDistance": { "Compute": "CombatBehaviorDistance" },
+                "CombatMovingRelativeSpeed": { "Compute": "CombatMovingRelativeSpeed" }
               }
             },
             {
-              "Enabled": {
-                "Compute": "Chase"
-              },
+              "Enabled": { "Compute": "Chase" },
               "Sensor": {
                 "Type": "And",
                 "Sensors": [
                   {
                     "Type": "Target",
-                    "Range": {
-                      "Compute": "CombatBehaviorDistance"
-                    }
+                    "Range": { "Compute": "CombatBehaviorDistance" }
                   },
                   {
                     "Type": "Eval",
@@ -2036,10 +1653,7 @@
               "Actions": [
                 {
                   "Type": "Timeout",
-                  "Delay": [
-                    0.5,
-                    0.5
-                  ]
+                  "Delay": [ 0.5, 0.5 ]
                 },
                 {
                   "Type": "State",
@@ -2050,45 +1664,26 @@
             {
               "$Comment": "Execute combat-oriented movement.",
               "Type": "Random",
-              "ExecuteFor": [
-                3,
-                5
-              ],
+              "ExecuteFor": [ 5, 5 ],
               "Sensor": {
                 "Type": "Target",
-                "Range": {
-                  "Compute": "CombatBehaviorDistance"
-                }
+                "Range": { "Compute": "CombatBehaviorDistance" }
               },
               "Instructions": [
                 {
-                  "$Comment": "Strafe around the target while fighting. - this strafes to a very short distance, changing it to maintain \u003E attack distance will lead to the NPC never attacking",
-                  "Enabled": {
-                    "Compute": "CombatStrafeWeight \u003E 0"
-                  },
-                  "Weight": {
-                    "Compute": "CombatStrafeWeight"
-                  },
+                  "$Comment": "Strafe around the target while fighting. - this strafes to a very short distance, changing it to maintain > attack distance will lead to the NPC never attacking",
+                  "Enabled": { "Compute": "CombatStrafeWeight > 0" },
+                  "Weight": { "Compute": "CombatStrafeWeight" },
                   "Sensor": {
                     "Type": "Target",
-                    "Range": {
-                      "Compute": "CombatBehaviorDistance"
-                    }
+                    "Range": { "Compute": "CombatBehaviorDistance" }
                   },
                   "BodyMotion": {
                     "Type": "MaintainDistance",
-                    "DesiredDistanceRange": {
-                      "Compute": "makeRange(AttackDistance - 1)"
-                    },
-                    "StrafingDurationRange": {
-                      "Compute": "CombatStrafingDurationRange"
-                    },
-                    "StrafingFrequencyRange": {
-                      "Compute": "CombatStrafingFrequencyRange"
-                    },
-                    "RelativeForwardsSpeed": {
-                      "Compute": "CombatMovingRelativeSpeed"
-                    }
+                    "DesiredDistanceRange": { "Compute": "makeRange(AttackDistance - 1)" },
+                    "StrafingDurationRange": { "Compute": "CombatStrafingDurationRange" },
+                    "StrafingFrequencyRange": { "Compute": "CombatStrafingFrequencyRange" },
+                    "RelativeForwardsSpeed": { "Compute": "CombatMovingRelativeSpeed" }
                   },
                   "HeadMotion": {
                     "Type": "Watch"
@@ -2096,30 +1691,17 @@
                 },
                 {
                   "$Comment": "Attack the target without strafing.",
-                  "Enabled": {
-                    "Compute": "CombatDirectWeight \u003E 0"
-                  },
-                  "Weight": {
-                    "Compute": "CombatDirectWeight"
-                  },
+                  "Enabled": { "Compute": "CombatDirectWeight > 0" },
+                  "Weight": { "Compute": "CombatDirectWeight" },
                   "Sensor": {
                     "Type": "Target",
-                    "Range": {
-                      "Compute": "CombatBehaviorDistance"
-                    }
+                    "Range": { "Compute": "CombatBehaviorDistance" }
                   },
                   "BodyMotion": {
                     "Type": "MaintainDistance",
-                    "DesiredDistanceRange": {
-                      "Compute": "makeRange(AttackDistance - 1)"
-                    },
-                    "StrafingDurationRange": [
-                      0,
-                      0
-                    ],
-                    "RelativeForwardsSpeed": {
-                      "Compute": "ChaseRelativeSpeed"
-                    }
+                    "DesiredDistanceRange": { "Compute": "makeRange(AttackDistance - 1)" },
+                    "StrafingDurationRange": [ 0, 0 ],
+                    "RelativeForwardsSpeed": { "Compute": "ChaseRelativeSpeed" }
                   },
                   "HeadMotion": {
                     "Type": "Watch"
@@ -2127,54 +1709,31 @@
                 },
                 {
                   "$Comment": "Attack the target without strafing.",
-                  "Enabled": {
-                    "Compute": "CombatAlwaysMovingWeight \u003E 0"
-                  },
-                  "Weight": {
-                    "Compute": "CombatAlwaysMovingWeight"
-                  },
+                  "Enabled": { "Compute": "CombatAlwaysMovingWeight > 0" },
+                  "Weight": { "Compute": "CombatAlwaysMovingWeight" },
                   "Sensor": {
                     "Type": "Target",
-                    "Range": {
-                      "Compute": "CombatBehaviorDistance"
-                    }
+                    "Range": { "Compute": "CombatBehaviorDistance" }
                   },
                   "HeadMotion": {
                     "Type": "Aim",
-                    "RelativeTurnSpeed": {
-                      "Compute": "CombatRelativeTurnSpeed"
-                    }
+                    "RelativeTurnSpeed": { "Compute": "CombatRelativeTurnSpeed" }
                   },
                   "BodyMotion": {
                     "Type": "Seek",
-                    "RelativeSpeed": {
-                      "Compute": "ChaseRelativeSpeed"
-                    },
-                    "StopDistance": {
-                      "Compute": "AttackDistance * 0.8"
-                    },
-                    "SlowDownDistance": {
-                      "Compute": "AttackDistance"
-                    }
+                    "RelativeSpeed": { "Compute": "ChaseRelativeSpeed" },
+                    "StopDistance": { "Compute": "AttackDistance * 0.8" },
+                    "SlowDownDistance": { "Compute": "AttackDistance" }
                   }
                 },
                 {
-                  "Reference": {
-                    "Compute": "AdditionalCombatBehaviorMacroElement"
-                  },
-                  "Interfaces": [
-                    "Hytale.Instruction.Null",
-                    "Hytale.Instruction.CombatBehavior"
-                  ],
+                  "Reference": { "Compute": "AdditionalCombatBehaviorMacroElement" },
+                  "Interfaces": [ "Hytale.Instruction.Null", "Hytale.Instruction.CombatBehavior" ],
                   "Modify": {
                     "_InterfaceParameters": {
                       "Hytale.Instruction.CombatBehavior": {
-                        "CombatBehaviorDistance": {
-                          "Compute": "CombatBehaviorDistance"
-                        },
-                        "ChaseRelativeSpeed": {
-                          "Compute": "ChaseRelativeSpeed"
-                        }
+                        "CombatBehaviorDistance": { "Compute": "CombatBehaviorDistance" },
+                        "ChaseRelativeSpeed": { "Compute": "ChaseRelativeSpeed" }
                       }
                     }
                   }
@@ -2182,9 +1741,7 @@
               ]
             },
             {
-              "Enabled": {
-                "Compute": "Chase"
-              },
+              "Enabled": { "Compute": "Chase" },
               "Actions": [
                 {
                   "Type": "State",
@@ -2197,19 +1754,14 @@
                 "Type": "Not",
                 "Sensor": {
                   "Type": "Target",
-                  "Range": {
-                    "Compute": "ViewRange"
-                  }
+                  "Range": { "Compute": "AlertedRange" }
                 }
               },
               "ActionsBlocking": true,
               "Actions": [
                 {
                   "Type": "Timeout",
-                  "Delay": [
-                    5,
-                    5
-                  ]
+                  "Delay": [ 5, 5 ]
                 },
                 {
                   "Type": "State",
@@ -2250,18 +1802,10 @@
                   "Sensor": {
                     "Reference": "Component_Sensor_Lost_Target_Detection",
                     "Modify": {
-                      "ViewRange": {
-                        "Compute": "AlertedRange / 2"
-                      },
-                      "ViewSector": {
-                        "Compute": "ViewSector"
-                      },
-                      "HearingRange": {
-                        "Compute": "HearingRange / 2"
-                      },
-                      "AbsoluteDetectionRange": {
-                        "Compute": "AbsoluteDetectionRange"
-                      },
+                      "ViewRange": { "Compute": "AlertedRange / 2" },
+                      "ViewSector": { "Compute": "ViewSector" },
+                      "HearingRange": { "Compute": "HearingRange / 2" },
+                      "AbsoluteDetectionRange": { "Compute": "AbsoluteDetectionRange" },
                       "TargetSlot": "LockedTarget"
                     }
                   },
@@ -2276,22 +1820,11 @@
                   "Sensor": {
                     "Reference": "Component_Sensor_Standard_Detection",
                     "Modify": {
-                      "ViewRange": {
-                        "Compute": "AlertedRange / 2"
-                      },
-                      "ViewSector": {
-                        "Compute": "ViewSector"
-                      },
-                      "HearingRange": {
-                        "Compute": "HearingRange / 2"
-                      },
-                      "AbsoluteDetectionRange": {
-                        "Compute": "AbsoluteDetectionRange"
-                      },
-                      "Attitudes": [
-                        "Hostile",
-                        "Neutral"
-                      ]
+                      "ViewRange": { "Compute": "AlertedRange / 2" },
+                      "ViewSector": { "Compute": "ViewSector" },
+                      "HearingRange": { "Compute": "HearingRange / 2" },
+                      "AbsoluteDetectionRange": { "Compute": "AbsoluteDetectionRange" },
+                      "Attitudes": [ "Hostile", "Neutral" ]
                     }
                   },
                   "Actions": [
@@ -2312,18 +1845,12 @@
                   "Actions": [
                     {
                       "Type": "SpawnParticles",
-                      "Offset": [
-                        0,
-                        2.1,
-                        0
-                      ],
+                      "Offset": [ 0, 2.1, 0 ],
                       "ParticleSystem": "Question"
                     },
                     {
                       "Type": "Timeout",
-                      "Delay": {
-                        "Compute": "ConfusedTimeRange"
-                      }
+                      "Delay": { "Compute": "ConfusedTimeRange" }
                     },
                     {
                       "Type": "State",
@@ -2336,15 +1863,11 @@
                   "Sensor": {
                     "Type": "ReadPosition",
                     "Slot": "SteppedBlock",
-                    "Range": {
-                      "Compute": "BlockStepDetectionRange"
-                    }
+                    "Range": { "Compute": "BlockStepDetectionRange" }
                   },
                   "BodyMotion": {
                     "Type": "Seek",
-                    "RelativeSpeed": {
-                      "Compute": "BlockStepDetectionRelativeSpeed"
-                    },
+                    "RelativeSpeed": { "Compute": "BlockStepDetectionRelativeSpeed" },
                     "SlowDownDistance": 4,
                     "StopDistance": 2
                   }
@@ -2364,18 +1887,12 @@
                   "Actions": [
                     {
                       "Type": "SpawnParticles",
-                      "Offset": [
-                        0,
-                        2.1,
-                        0
-                      ],
+                      "Offset": [ 0, 2.1, 0 ],
                       "ParticleSystem": "Question"
                     },
                     {
                       "Type": "Timeout",
-                      "Delay": {
-                        "Compute": "ConfusedTimeRange"
-                      }
+                      "Delay": { "Compute": "ConfusedTimeRange" }
                     },
                     {
                       "Type": "State",
@@ -2387,18 +1904,10 @@
                   "Sensor": {
                     "Reference": "Component_Sensor_Lost_Target_Detection",
                     "Modify": {
-                      "ViewRange": {
-                        "Compute": "AlertedRange / 2"
-                      },
-                      "ViewSector": {
-                        "Compute": "ViewSector"
-                      },
-                      "HearingRange": {
-                        "Compute": "HearingRange / 2"
-                      },
-                      "AbsoluteDetectionRange": {
-                        "Compute": "AbsoluteDetectionRange"
-                      },
+                      "ViewRange": { "Compute": "AlertedRange / 2" },
+                      "ViewSector": { "Compute": "ViewSector" },
+                      "HearingRange": { "Compute": "HearingRange / 2" },
+                      "AbsoluteDetectionRange": { "Compute": "AbsoluteDetectionRange" },
                       "TargetSlot": "LockedTarget"
                     }
                   },
@@ -2413,22 +1922,11 @@
                   "Sensor": {
                     "Reference": "Component_Sensor_Standard_Detection",
                     "Modify": {
-                      "ViewRange": {
-                        "Compute": "AlertedRange / 2"
-                      },
-                      "ViewSector": {
-                        "Compute": "ViewSector"
-                      },
-                      "HearingRange": {
-                        "Compute": "HearingRange / 2"
-                      },
-                      "AbsoluteDetectionRange": {
-                        "Compute": "AbsoluteDetectionRange"
-                      },
-                      "Attitudes": [
-                        "Hostile",
-                        "Neutral"
-                      ]
+                      "ViewRange": { "Compute": "AlertedRange / 2" },
+                      "ViewSector": { "Compute": "ViewSector" },
+                      "HearingRange": { "Compute": "HearingRange / 2" },
+                      "AbsoluteDetectionRange": { "Compute": "AbsoluteDetectionRange" },
+                      "Attitudes": [ "Hostile", "Neutral" ]
                     }
                   },
                   "Actions": [
@@ -2451,18 +1949,10 @@
                   "Sensor": {
                     "Reference": "Component_Sensor_Lost_Target_Detection",
                     "Modify": {
-                      "ViewRange": {
-                        "Compute": "AlertedRange"
-                      },
-                      "ViewSector": {
-                        "Compute": "ViewSector"
-                      },
-                      "HearingRange": {
-                        "Compute": "HearingRange"
-                      },
-                      "AbsoluteDetectionRange": {
-                        "Compute": "AbsoluteDetectionRange"
-                      },
+                      "ViewRange": { "Compute": "AlertedRange" },
+                      "ViewSector": { "Compute": "ViewSector" },
+                      "HearingRange": { "Compute": "HearingRange" },
+                      "AbsoluteDetectionRange": { "Compute": "AbsoluteDetectionRange" },
                       "TargetSlot": "LockedTarget"
                     }
                   },
@@ -2477,22 +1967,11 @@
                   "Sensor": {
                     "Reference": "Component_Sensor_Standard_Detection",
                     "Modify": {
-                      "ViewRange": {
-                        "Compute": "AlertedRange"
-                      },
-                      "ViewSector": {
-                        "Compute": "ViewSector"
-                      },
-                      "HearingRange": {
-                        "Compute": "HearingRange"
-                      },
-                      "AbsoluteDetectionRange": {
-                        "Compute": "AbsoluteDetectionRange"
-                      },
-                      "Attitudes": [
-                        "Hostile",
-                        "Neutral"
-                      ]
+                      "ViewRange": { "Compute": "AlertedRange" },
+                      "ViewSector": { "Compute": "ViewSector" },
+                      "HearingRange": { "Compute": "HearingRange" },
+                      "AbsoluteDetectionRange": { "Compute": "AbsoluteDetectionRange" },
+                      "Attitudes": [ "Hostile", "Neutral" ]
                     }
                   },
                   "Actions": [
@@ -2508,10 +1987,7 @@
                     "Motions": [
                       {
                         "Type": "Timer",
-                        "Time": [
-                          2,
-                          3
-                        ],
+                        "Time": [ 2, 3 ],
                         "Motion": {
                           "Type": "Wander",
                           "MaxHeadingChange": 1,
@@ -2524,10 +2000,7 @@
                         "Motions": [
                           {
                             "Type": "Timer",
-                            "Time": [
-                              2,
-                              3
-                            ],
+                            "Time": [ 2, 3 ],
                             "Motion": {
                               "Type": "WanderInCircle",
                               "Radius": 5,
@@ -2537,10 +2010,7 @@
                           },
                           {
                             "Type": "Timer",
-                            "Time": [
-                              1,
-                              2
-                            ],
+                            "Time": [ 1, 2 ],
                             "Motion": {
                               "Type": "Nothing"
                             }
@@ -2553,9 +2023,7 @@
                   "Actions": [
                     {
                       "Type": "Timeout",
-                      "Delay": {
-                        "Compute": "SearchTimeRange"
-                      }
+                      "Delay": { "Compute": "SearchTimeRange" }
                     },
                     {
                       "Type": "State",
@@ -2583,14 +2051,10 @@
                     "TargetSlot": "LockedTarget"
                   },
                   {
-                    "Enabled": {
-                      "Compute": "AbsoluteDetectionRange \u003E 0"
-                    },
+                    "Enabled": { "Compute": "AbsoluteDetectionRange > 0" },
                     "Type": "Target",
                     "TargetSlot": "LockedTarget",
-                    "Range": {
-                      "Compute": "AbsoluteDetectionRange"
-                    }
+                    "Range": { "Compute": "AbsoluteDetectionRange" }
                   }
                 ]
               },
@@ -2604,21 +2068,13 @@
             {
               "Sensor": {
                 "Type": "Leash",
-                "Range": {
-                  "Compute": "LeashDistance * 0.3"
-                }
+                "Range": { "Compute": "LeashDistance * 0.3" }
               },
               "BodyMotion": {
                 "Type": "Seek",
-                "SlowDownDistance": {
-                  "Compute": "LeashDistance * 0.4"
-                },
-                "StopDistance": {
-                  "Compute": "LeashDistance * 0.2"
-                },
-                "RelativeSpeed": {
-                  "Compute": "LeashRelativeSpeed"
-                },
+                "SlowDownDistance": { "Compute": "LeashDistance * 0.4" },
+                "StopDistance": { "Compute": "LeashDistance * 0.2" },
+                "RelativeSpeed": { "Compute": "LeashRelativeSpeed" },
                 "UsePathfinder": true
               }
             },
@@ -2657,15 +2113,11 @@
               ]
             },
             {
-              "$Comment": "If the target gets too close and the NPCs isn\u0027t shy, attack it",
-              "Enabled": {
-                "Compute": "!FleeIfNotThreatened \u0026\u0026 AbsoluteDetectionRange \u003E 0"
-              },
+              "$Comment": "If the target gets too close and the NPCs isn't shy, attack it",
+              "Enabled": { "Compute": "!FleeIfNotThreatened && AbsoluteDetectionRange > 0" },
               "Sensor": {
                 "Type": "Target",
-                "Range": {
-                  "Compute": "AbsoluteDetectionRange"
-                }
+                "Range": { "Compute": "AbsoluteDetectionRange" }
               },
               "Actions": [
                 {
@@ -2675,21 +2127,16 @@
               ]
             },
             {
-              "$Comment": "Start a timer to switch to combat if it can\u0027t flee from the target",
+              "$Comment": "Start a timer to switch to combat if it can't flee from the target",
               "Continue": true,
               "Sensor": {
                 "Type": "Target",
-                "Range": {
-                  "Compute": "FleeRange"
-                }
+                "Range": { "Compute": "FleeRange" }
               },
               "Actions": [
                 {
                   "Type": "Timeout",
-                  "Delay": [
-                    8,
-                    8
-                  ],
+                  "Delay": [ 8, 8 ],
                   "Action": {
                     "Type": "State",
                     "State": "Combat.Message"
@@ -2700,18 +2147,12 @@
             {
               "Sensor": {
                 "Type": "Target",
-                "Range": {
-                  "Compute": "FleeRange"
-                }
+                "Range": { "Compute": "FleeRange" }
               },
               "BodyMotion": {
                 "Type": "Flee",
-                "SlowDownDistance": {
-                  "Compute": "min(ViewRange,FleeRange)"
-                },
-                "StopDistance": {
-                  "Compute": "FleeRange \u002B 1"
-                },
+                "SlowDownDistance": { "Compute": "min(ViewRange,FleeRange)" },
+                "StopDistance": { "Compute": "FleeRange + 1" },
                 "RelativeSpeed": 0.68
               }
             },
@@ -2745,11 +2186,7 @@
                 },
                 {
                   "Type": "SpawnParticles",
-                  "Offset": [
-                    0,
-                    0.8,
-                    0
-                  ],
+                  "Offset": [ 0, 0.8, 0 ],
                   "ParticleSystem": "Alerted"
                 }
               ]
@@ -2758,22 +2195,11 @@
               "Sensor": {
                 "Reference": "Component_Sensor_Standard_Detection",
                 "Modify": {
-                  "ViewRange": {
-                    "Compute": "AlertedRange"
-                  },
-                  "ViewSector": {
-                    "Compute": "ViewSector"
-                  },
-                  "HearingRange": {
-                    "Compute": "HearingRange"
-                  },
-                  "AbsoluteDetectionRange": {
-                    "Compute": "AbsoluteDetectionRange"
-                  },
-                  "Attitudes": [
-                    "Hostile",
-                    "Neutral"
-                  ]
+                  "ViewRange": { "Compute": "AlertedRange" },
+                  "ViewSector": { "Compute": "ViewSector" },
+                  "HearingRange": { "Compute": "HearingRange" },
+                  "AbsoluteDetectionRange": { "Compute": "AbsoluteDetectionRange" },
+                  "Attitudes": [ "Hostile", "Neutral" ]
                 }
               },
               "Actions": [
@@ -2786,19 +2212,14 @@
             {
               "BodyMotion": {
                 "Type": "WanderInCircle",
-                "Radius": {
-                  "Compute": "WanderRadius * 2"
-                },
+                "Radius": { "Compute": "WanderRadius * 2" },
                 "MaxHeadingChange": 90,
                 "RelativeSpeed": 1
               },
               "Actions": [
                 {
                   "Type": "Timeout",
-                  "Delay": [
-                    5,
-                    8
-                  ],
+                  "Delay": [ 5, 8 ],
                   "Action": {
                     "Type": "State",
                     "State": "Idle"
@@ -2811,7 +2232,5 @@
       ]
     }
   ],
-  "NameTranslationKey": {
-    "Compute": "NameTranslationKey"
-  }
+  "NameTranslationKey": { "Compute": "NameTranslationKey" }
 }

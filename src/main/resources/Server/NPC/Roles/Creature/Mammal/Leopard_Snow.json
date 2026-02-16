@@ -8,7 +8,7 @@
     "MaxHealth": 103,
     "MaxSpeed": 10,
     "WanderRadius": 15,
-    "ViewRange": 30,
+    "ViewRange": 35,
     "HearingRange": 12,
     "AbsoluteDetectionRange": 2,
     "AlertedRange": 60,
